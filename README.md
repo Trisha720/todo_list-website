@@ -28,3 +28,8 @@ Follow these steps to run the project locally:
 ```bash
 git clone https://github.com/Trisha720/todo_list-website.git
 cd todo_list-website
+## 🌐 Live Demo
+
+Check out the live version of the To-Do List Website here:
+
+👉 [https://Trisha720.github.io/todo_list-website/](https://Trisha720.github.io/todo_list-website/)
