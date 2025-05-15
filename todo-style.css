@@ -1,0 +1,120 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    background: url('todo image.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: -1;
+  }
+  body.dark-mode::before {
+    background-color: rgba(30, 30, 47, 0.5);
+  }
+  .container {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 30px 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 600px;
+    backdrop-filter: blur(4px);
+    position: relative;
+    z-index: 1;
+  }
+  h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+  }
+  .input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  input[type="text"], input[type="datetime-local"], select {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.8);
+  }
+  button {
+    padding: 12px;
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  button:hover {
+    background: linear-gradient(45deg, #2575fc, #6a11cb);
+  }
+  .controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+  li {
+    background: rgba(255, 255, 255, 0.9);
+    margin-bottom: 10px;
+    padding: 12px 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+  }
+  li.completed {
+    text-decoration: line-through;
+    color: gray;
+    background: rgba(230, 230, 230, 0.9);
+  }
+  li.high { border-left: 5px solid red; }
+  li.medium { border-left: 5px solid orange; }
+  li.low { border-left: 5px solid green; }
+  .editable {
+    flex-grow: 1;
+    margin-left: 10px;
+  }
+  .counter {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+  }
+  .toggle-mode {
+    background: linear-gradient(45deg, #ff6a00, #ee0979);
+  }
+  body.dark-mode input, body.dark-mode select {
+    background: rgba(44, 44, 62, 0.8);
+    color: white;
+  }
+  body.dark-mode li {
+    background: rgba(51, 56, 82, 0.9);
+    color: white;
+  }
+  body.dark-mode li.completed {
+    color: #999;
+    background: rgba(44, 47, 64, 0.9);
+  }
+  
